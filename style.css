@@ -1,0 +1,85 @@
+body {
+    background-color: #003366;
+    color: #ffffff;
+    padding-top: 20px;
+}
+h1 {
+    color: #fff;
+    text-align: center;
+}
+.container {
+    transition: margin-left .5s;
+    background-color: #336699;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.main-content {
+    transition: margin-left .5s;
+    margin-left: 200px;
+    /* Ajusta o conteúdo principal para o lado para acomodar o menu lateral */
+    padding: 40px;
+    /* Espaçamento do conteúdo principal */
+}
+.sidenav {
+    transition: .5s;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #336699;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+
+.img-container {
+    text-align: center;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+.dropdown {
+    margin-bottom: 20px;
+}
+.dropdown-menu {
+    background-color: #336699;
+}
+.dropdown-item {
+    color: #ffffff;
+}
+.dropdown-item:hover {
+    background-color: #003366;
+}
