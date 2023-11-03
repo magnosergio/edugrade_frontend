@@ -37,7 +37,7 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link white-text" id="contact-tab" data-bs-toggle="tab"
                     data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
-                    aria-selected="false">Nota</button>
+                    aria-selected="false" onclick="getInfo()">Nota</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -46,10 +46,10 @@
                 <div class="row g-3">
                     <div></div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Nome" aria-label="Nome">
+                        <input type="text" class="form-control" id="nomeInput" placeholder="Nome" aria-label="Nome">
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary" onclick="cadastrarAluno()">Cadastrar</button>
                     </div>
                 </div>
             </div>
@@ -57,10 +57,10 @@
                 <div class="row g-3">
                     <div></div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Nome" aria-label="Nome">
+                        <input type="text" class="form-control" id="disciplinaInput" placeholder="Nome" aria-label="Nome">
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary" onclick="cadastrarDisciplina()">Cadastrar</button>
                     </div>
                 </div>
             </div>

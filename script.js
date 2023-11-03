@@ -83,4 +83,88 @@ function requestData(url) {
 }
 /* ----------------------------------------------------------------------- */
 
-//
+// Função para cadastrar Aluno
+function cadastrarAluno() {
+    // Obter o valor do campo de entrada "Nome"
+    const nome = document.getElementById('nomeInput').value;
+
+    // Dados a serem enviados
+    const data = {
+        nome: nome
+    };
+
+    // Token
+    const token = '8c3ddc34ec43cef32fc618ca085fedbb71c48b39';
+
+    // URL da API
+    const url = 'http://18.117.70.4:8000/api/v1/alunos/';
+
+    // Enviar a solicitação POST para a API
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ' + token
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
+            // Limpar o campo "nome" para permitir novo cadastro
+            nomeInput.value = '';
+
+            // Exibir mensagem de sucesso em um popup
+            alert('Aluno cadastrado com sucesso!');
+        } else {
+            throw new Error('Erro ao cadastrar aluno');
+        }
+    })
+    .catch(error => {
+        // Exibir mensagem de erro em um popup
+        alert('Erro: ' + error);
+    });
+}
+
+// Função para cadastrar Disciplina
+function cadastrarDisciplina() {
+    // Obter o valor do campo de entrada "Nome"
+    const nome = document.getElementById('disciplinaInput').value;
+
+    // Dados a serem enviados
+    const data = {
+        nome: nome
+    };
+
+    // Token
+    const token = '8c3ddc34ec43cef32fc618ca085fedbb71c48b39';
+
+    // URL da API
+    const url = 'http://18.117.70.4:8000/api/v1/disciplinas/';
+
+    // Enviar a solicitação POST para a API
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ' + token
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.ok) {
+            // Limpar o campo "nome" para permitir novo cadastro
+            disciplinaInput.value = '';
+
+            // Exibir mensagem de sucesso em um popup
+            alert('Disciplina cadastrado com sucesso!');
+        } else {
+            throw new Error('Erro ao cadastrar aluno');
+        }
+    })
+    .catch(error => {
+        // Exibir mensagem de erro em um popup
+        alert('Erro: ' + error);
+    });
+}
+
+function getInfo() {}
