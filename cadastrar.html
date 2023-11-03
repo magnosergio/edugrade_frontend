@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Menu Lateral -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a></a>
+        <a></a>
+        <a href="index.html">Página Inicial</a>
+        <a href="consultar.html">Consultar</a>
+    </div>
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    </div>
+    <div id="container" class="container d-flex flex-column align-items-center">
+        <h1 id="mytitle">Cadastrar</h1>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active white-text" id="home-tab" data-bs-toggle="tab"
+                    data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                    aria-selected="true">Aluno</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link white-text" id="profile-tab" data-bs-toggle="tab"
+                    data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                    aria-selected="false">Disciplina</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link white-text" id="contact-tab" data-bs-toggle="tab"
+                    data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                    aria-selected="false">Nota</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="row g-3">
+                    <div></div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nome" aria-label="Nome">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="row g-3">
+                    <div></div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nome" aria-label="Nome">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <div class="row g-3">
+                    <div></div>
+                    <div></div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Aluno" aria-label="Aluno">
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Ano" aria-label="Ano">
+                        </div>
+                        <div class="col">
+                            <select class="form-select" aria-label="Bimestre">
+                                <option selected>Selecione o Bimestre</option>
+                                <option value="1">Primeiro</option>
+                                <option value="2">Segundo</option>
+                                <option value="3">Terceiro</option>
+                                <option value="4">Quarto</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Disciplina" aria-label="Disciplina">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Nota" aria-label="Nota">
+                        </div>                     
+                    </div>
+                    <div></div><div class="col-12">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
