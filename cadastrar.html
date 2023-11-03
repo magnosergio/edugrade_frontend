@@ -21,6 +21,8 @@
     <div id="main">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
     </div>
+
+    <!-- Form para cadastro -->
     <div id="container" class="container d-flex flex-column align-items-center">
         <h1 id="mytitle">Cadastrar</h1>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -70,16 +72,17 @@
                     <div></div>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Aluno" aria-label="Aluno">
+                            <input list="alunosList" class="form-control" id="alunoSelected" placeholder="Selecione o Aluno" aria-label="Aluno">
+                            <datalist id="alunosList"></datalist>
                         </div>
                     </div>
                     <div></div>
                     <div class="row">
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Ano" aria-label="Ano">
+                            <input type="number" id="anoInput" class="form-control" placeholder="Ano" aria-label="Ano">
                         </div>
                         <div class="col">
-                            <select class="form-select" aria-label="Bimestre">
+                            <select class="form-select" id="bimestreInput" aria-label="Bimestre">
                                 <option selected>Selecione o Bimestre</option>
                                 <option value="1">Primeiro</option>
                                 <option value="2">Segundo</option>
@@ -92,15 +95,16 @@
                     <div class="row">
                         <div class="col">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Disciplina" aria-label="Disciplina">
+                                <input list="disciplinasList" class="form-control" id="disciplinaSelected" placeholder="Selecione a Disciplina" aria-label="Disciplina">
+                                <datalist id="disciplinasList"></datalist>
                             </div>
                         </div>
                         <div class="col">
-                            <input type="number" class="form-control" placeholder="Nota" aria-label="Nota">
+                            <input type="number" class="form-control" id="notaInput" placeholder="Nota" aria-label="Nota">
                         </div>                     
                     </div>
                     <div></div><div class="col-12">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary" onclick="cadastrarNota()">Cadastrar</button>
                     </div>                  
                 </div>
             </div>
