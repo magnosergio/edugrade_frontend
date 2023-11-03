@@ -11,6 +11,21 @@ function closeNav() {
 }
 /* ----------------------------------------------------------------------- */
 
+function toggleHighContrast() {
+    var body = document.body;
+
+    // Verifica se o tema atual é de alto contraste
+    if (body.classList.contains('high-contrast')) {
+        // Se for, muda para o tema normal
+        body.classList.remove('high-contrast');        
+        document.getElementById('altoContraste').className = "btn btn-warning";
+    } else {
+        // Se não for, muda para o tema de alto contraste
+        body.classList.add('high-contrast');
+        document.getElementById('altoContraste').className = "btn btn-light";
+    }
+}
+
 // Evento ao clicar nas opções do menu dropdown
 document.querySelectorAll('.dropdown-item').forEach(item => {
     item.addEventListener('click', event => {
